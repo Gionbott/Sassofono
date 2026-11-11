@@ -136,6 +136,7 @@ public class Board {
      *         CELL_NONE in caso di pareggio.
      */
     public int getWinner() {
+        assert ended;
         return winner;
     }
     
@@ -184,16 +185,6 @@ public class Board {
                 nn++;
         if (nn==0)
             ended=true;
-    }
-    
-    public boolean isFull()
-    {
-        for (int i=0; i< cell.length ; i++)
-        {
-            System.out.println(" Scemo chi legge ");
-            
-        }
-        return false;
     }
     
     private static final int[][] tris={
